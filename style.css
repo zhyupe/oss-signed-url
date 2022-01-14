@@ -1,0 +1,72 @@
+body {
+  font-family: pingfang SC,helvetica neue,arial,hiragino sans gb,microsoft yahei ui,microsoft yahei,simsun,sans-serif;
+  background: #fafafa;
+}
+
+input, textarea {
+  padding: 5px 10px;
+  border: 1px solid #2fa2bd;
+  border-radius: 3px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+input, textarea, button {
+  outline: 0;
+  transition: box-shadow .2s ease-in-out;
+}
+
+input:active, input:focus, textarea:active, textarea:focus, button:hover, button:focus {
+  box-shadow: 0 0 5px #2fa2bd80;
+}
+
+input:disabled {
+  color: #999;
+  background: #eee;
+}
+
+a {
+  color: #2fa2bd;
+  text-decoration: none;
+}
+
+#app {
+  margin: 0 auto;
+  padding-top: 60px;
+  max-width: 960px;
+}
+
+.notice {
+  border-left: 5px solid #2fa2bd;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+.notice p {
+  margin: 0 0 5px;
+}
+
+.input {
+  display: flex;
+  padding: 5px 0;
+}
+
+.input label:first-of-type {
+  width: 150px;
+}
+
+.input > input {
+  flex: 1;
+}
+
+.input .radio {
+  width: 100px;
+}
+
+.output {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #2fa2bd;
+  word-break: break-all;
+}

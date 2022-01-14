@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OSS 签名 URL 生成器</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="notice">
+        <p>生成阿里云 OSS 的签名 URL，支持生成 GET / PUT 并自定义过期时间。</p>
+        <p>
+          <b>注意：在任何情况下，您都不应该将 AccessKey 提交至不受信任的服务。</b><br>
+          请在使用本工具前自行审查代码，本工具不提供任何担保。
+        </p>
+        <p>
+          基于 MIT 协议发布
+          <span style="margin: 0 5px">/</span>
+          <a href="https://github.com/zhyupe/oss-signed-url">https://github.com/zhyupe/oss-signed-url</a>
+        </p>
+      </div>
+      <div class="input">
+        <label for="akid">AccessKeyId</label>
+        <input id="akid" value="nz2pc56s936****">
+      </div>
+      <div class="input">
+        <label for="aks">AccessKeySecret</label>
+        <input id="aks" type="password" value="xxxxxxxx">
+      </div>
+      <div class="input">
+        <label for="url">URL</label>
+        <input id="url" value="http://oss-example.oss-cn-hangzhou.aliyuncs.com/oss-api.pdf">
+      </div>
+      <div class="input">
+        <label>方法</label>
+        <label class="radio">
+          <input id="method_get" type="radio" name="method" value="GET" checked>
+          GET (读)
+        </label>
+        <label class="radio">
+          <input id="method_put" type="radio" name="method" value="PUT">
+          PUT (写)
+        </label>
+      </div>
+      <div class="input">
+        <label for="md5">MD5</label>
+        <input id="md5" value="">
+      </div>
+      <div class="input">
+        <label for="ctype">Content-Type</label>
+        <input id="ctype" value="text/html">
+      </div>
+      <div class="input">
+        <label for="expires">过期时间</label>
+        <input id="expires" type="datetime-local">
+      </div>
+      <div class="output">
+        <a id="output" target="_blank" rel="noreferer noopener"></a>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
